@@ -8,11 +8,12 @@
 		<ol>
 		 @foreach ($users as $user) 
 	        <li>
-	        	 {{$user->name}} - Posts={{$user->posts()->count()}}
+	        	 {{$user->name}} - Posts={{$user->posts->count()}}
 	        </li>
+	        <br>
     		@foreach( $user->posts as $post)
     			<ol>
-    				{{$post->text}}
+    				-{{$post->text}}
     			</ol>
     			<br>
     		@endforeach
